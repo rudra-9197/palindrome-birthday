@@ -38,12 +38,23 @@ dateStr.year=date.year.toString();
 return dateStr;
 }
 
-var date= {
-    day: 1,
-    month: 22,
-    year: 2021
-   
+function getAllDateForms(date){
+
+var dateStr = convertDateToStr(date);
+
+var ddmmyyyy = dateStr.day + dateStr.month + dateStr.year;
+var mmddyyyy = dateStr.month + dateStr.day + dateStr.year;
+var yyyymmdd = dateStr.year + dateStr.month + dateStr.day;
+var ddmmyy = dateStr.day + dateStr.month +dateStr.year.slice(-2);
+var mmddyy = dateStr.month+dateStr.day+dateStr.year.slice(-2);
+var yymmdd =dateStr.year.slice(-2)+dateStr.month+dateStr.day;
+
+return [ddmmyyyy,mmddyyyy,yyyymmdd,ddmmyy,mmddyy,yymmdd];
 }
 
-
+var date ={
+    day:01,
+    month: 12,
+    year: 2021
+}
   
