@@ -140,11 +140,31 @@ nextDate =getNextDate(nextDate);
 return [ctr, nextDate];
 }
 
-var date ={
-    day: 31,
-    month: 12,
-    year: 2020
-};
+var birthDate = document.querySelector("#birth-date");
+var checkButton = document.querySelector("#show-button");
+var output = document.querySelector("#output-ans");
 
-console.log(getNextPalindromeDate(date));
-  
+function dateArray(){
+
+ var dateA = birthDate.value.split('-');
+ var date = {
+     day :Number( dateA[2]),
+     month : Number( dateA[1]),
+     year : Number(dateA[0])
+ };
+ 
+ var isPalindrome = checkPalindromeForAllDateFormats(date);
+
+ if (isPalindrome){
+    output.innerText ="yup!!...yours is a palindrome"
+ }
+else {
+    var [ctr, nextDate]=getNextPalindromeDate(date);
+    output.innerText = " you missed it by "+ ctr + " days" + " next palindrome date is " + nextDate.day + "-"+nextDate.month+"-"+nextDate.year
+
+   
+}
+
+}
+checkButton.addEventListener('click',dateArray)
+

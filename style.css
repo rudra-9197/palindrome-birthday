@@ -1,0 +1,35 @@
+.container{
+    text-align: center;
+    font-family: 'Lobster', cursive;
+    font-size: 1.5rem;
+    font-weight: bold;
+   
+}
+button{
+    padding: 0.5rem;
+    background-color: rgb(7, 163, 33);
+    font-size: large;
+    border-radius: 5px;
+    color: aliceblue;
+}
+button:hover{
+    cursor: pointer;
+}
+
+input{
+    height: 2.5rem;
+    width: 30em;
+    margin: 1rem;
+    border-style: solid;
+   border-color: rgb(17, 180, 17);
+   border-radius: 00.5rem;
+   font-size: x-large;
+   margin-top: 1rem;
+}
+.output{
+
+font-family: 'Lobster', cursive;
+font-size: x-large;
+color: rgb(71, 255, 71);
+
+}
