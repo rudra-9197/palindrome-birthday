@@ -5,7 +5,7 @@ function reverseStr(str) {
     return reversedListofChars;
 }
 
-function ispalindrome(str){
+function isPalindrome(str){
 
 var reverse = reverseStr(str);
 if (str===reverse){
@@ -52,9 +52,27 @@ var yymmdd =dateStr.year.slice(-2)+dateStr.month+dateStr.day;
 return [ddmmyyyy,mmddyyyy,yyyymmdd,ddmmyy,mmddyy,yymmdd];
 }
 
+function checkPalindromeForAllDateFormats(date){
+var listOfPalindromes = getAllDateForms(date);
+
+var flag = false;
+for (var i=0; i< listOfPalindromes.length;i++){
+    if(isPalindrome(listOfPalindromes[i])){
+        flag = true;
+        break;
+    }
+    
+}
+return flag;
+    
+}
+
+
+
 var date ={
-    day:01,
-    month: 12,
-    year: 2021
+    day:2,
+    month: 11,
+    year: 2020
 }
   
+console.log(checkPalindromeForAllDateFormats(date));
