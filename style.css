@@ -24,7 +24,9 @@ input{
    border-color: rgb(17, 180, 17);
    border-radius: 00.5rem;
    font-size: x-large;
-   margin-top: 1rem;
+   font-family: 'Padauk', sans-serif;
+
+   
 }
 .output{
 
